@@ -85,7 +85,7 @@ td {
     padding: 5px;
 }
 .login-box , .register-box, .profile-box {
-    height: 100vh;
+    height: 96vh;
 }
 .login-page, .register-page, .profile-page {
     background-color: rgb(237, 243, 238);
@@ -103,11 +103,10 @@ td {
         font-size: 10px !important;
     }
     .login-box {
-        height: 58vh;
+        height: 30vh;
     }
     .register-box, .profile-box {
-        height: 100vh;
-        margin-top: 180px;
+        height: 80vh;
     }
     .form-title {
         font-size: 14px;
