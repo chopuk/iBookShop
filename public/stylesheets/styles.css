@@ -103,10 +103,10 @@ td {
         font-size: 10px !important;
     }
     .login-box {
-        height: 30vh;
+        height: 35vh;
     }
     .register-box, .profile-box {
-        height: 80vh;
+        height: 110vh;
     }
     .form-title {
         font-size: 14px;
