@@ -1,0 +1,135 @@
+.container {
+    max-width: 1280px !important;
+}
+.filter-buttons {
+    margin-top: 70px;
+}
+.filter-buttons .btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #53bd50 !important;
+    color: #fff !important;
+}
+.filter-buttons .btn-primary{
+    background-color: #fff !important;
+    border: none !important;
+}
+.filter-buttons .btn-primary:hover{
+    background-color: #f7941d !important;
+    color: #fff !important;
+}
+.card {
+    height: 350px;
+}
+.card img {
+    height: 300px;
+    width: 220px;
+}
+.title {
+    font-size: 16px;
+}
+.hide {
+    display: none;
+}
+.out-of-stock {
+    background-color: red !important;
+}
+a.welcome {
+    color: yellow !important;
+}
+.addressDiv {
+    display: none;
+}
+.invalid {
+    border: 3px solid red !important;
+}
+
+.bookdetails {
+    margin-top: 70px;
+} 
+.bookdetails img {
+    height: 500px;
+    width: 400px;
+}
+.bookinfo {
+    width: 700px;
+}
+.bookinfo1 {
+    height: 500px;
+}
+.itemsInCart {
+    color: rgb(233, 240, 241) !important;
+    font-weight: bold;
+}
+td {
+    vertical-align: middle;
+}
+#postcodeURL {
+    display: none;
+}
+.quicksearch {
+    width: 150px;
+    min-width: 20px;
+    margin-right: 20px;
+}
+#selectFilter {
+    width: 150px;
+    min-width: 20px;
+    margin-right: 20px;
+}
+#selectSort {
+    width: 150px;
+    min-width: 20px;
+}
+.cart-box, .order-box {
+    padding: 5px;
+}
+.login-box , .register-box, .profile-box {
+    height: 100vh;
+}
+.login-page, .register-page, .profile-page {
+    background-color: rgb(237, 243, 238);
+    width: 70vw;
+    padding-left:20px;
+    padding-right:20px;
+    border: 1px solid;
+    box-shadow: 5px 10px 8px #473d3d;
+}
+@media ( width < 500px) {
+    .login-page, .register-page, .profile-page {
+        width: 100vw;
+        padding-left:10px;
+        padding-right:10px;
+        font-size: 10px !important;
+    }
+    .login-box {
+        height: 58vh;
+    }
+    .register-box, .profile-box {
+        height: 100vh;
+        margin-top: 180px;
+    }
+    .form-title {
+        font-size: 14px;
+    }
+    #login-form input, #register-form input, #profile-form input {
+        font-size: 10px;
+    }
+    #register-form select, #profile-form select {
+        font-size: 10px;
+    }
+    .login-button, .register-button, .profile-button {
+        font-size: 12px !important;
+    }
+    #btnAddress {
+        font-size: 12px !important;
+    }
+}
+@media ( width < 500px) {
+    .cart-table, .order-table {
+        font-size: 10px;
+    }
+    .cart-box, .order-box {
+        padding: 0;
+    }
+}

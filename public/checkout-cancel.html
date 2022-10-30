@@ -1,0 +1,21 @@
+<!-- Stripe is redirected to this page on cancel. -->
+<!-- We then have to redirect to the real ejs page using javascript -->
+<!-- This is because Stripe can only redirect to a static html page -->
+<!-- Two versions of this page exist. Testing ( localhost ) and production ( irender.com ) -->
+<!-- Due to an environment variable on the server side, Stripe knows which one to use. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanks For Your Order!</title>
+  <script>
+    window.onload = function() {
+      location.href = "https://ibookshop.onrender.com/book/booklist"
+    } 
+  </script>
+</head>
+<body>
+</body>
+</html>

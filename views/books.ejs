@@ -1,0 +1,70 @@
+<section class="filter-buttons">
+  <div class="container">
+    <div class = "d-flex justify-content-center mb-3">
+        <input type="text" class="quicksearch" placeholder="Search" />
+
+        <select name="selectFilter" id="selectFilter" class="form-select">
+          <option value="filter" selected disabled>Filter</option>
+          <option value="*">All</option>
+          <option value=".Computer">Computer</option>
+          <option value=".Television">Television</option>
+          <option value=".Food">Food</option>
+          <option value=".Science">Science</option>
+          <option value=".World">World</option>
+          <option value=".Fiction">Fiction</option>
+        </select>
+
+        <select name="selectSort" id="selectSort" class="form-select">
+          <option value="sort" selected disabled>Sort</option>
+          <option value="title">Title</option>
+          <option value="justprice">Price (asc)</option>
+          <option value="justpricedesc">Price (desc)</option>
+        </select>
+    </div>
+</section>
+
+<section class="pb-5 pt-0 ps-5 pe-5">
+    
+    <div class="container">
+      <div class="row text-center g-4" id="books-list">
+
+        <% for (var book of books) { %>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 book-item <%= book.genre %>">
+            <div class="card bg-dark text-light">
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title mb-3 title"><%= book.title %></h5>
+                <a href="/book/bookdetails/<%= book._id %>">
+                  <img
+                        src="../images/<%= book.cover %>"
+                        alt=""
+                  />
+                </a>
+              </div>
+              <p class="card-text mb-3">
+                <div class="d-flex justify-content-around align-items-center">
+                  <a href="#" class="btn btn-success me-1 btn-sm"><%- displayPrice(book.price) %></a>
+                  <% if (book.quantity === 0) { %>
+                    <button type=“button” class="btn btn-primary ms-1 btn-sm out-of-stock disabled">
+                      <%- buttonText(book.quantity) %>
+                    </button>
+                  <% } else { %>
+                    <form action='/cart/additem/<%= book._id %>', method='POST' class="m-0 p-0">
+                      <input type="hidden" value="{_csrf}" name="_csrf">
+                      <input type="submit" class="btn btn-primary ms-1 btn-sm"
+                          value="<%- buttonText(book.quantity) %>">
+                    </form>
+                  <% } %>
+                  </div>
+              </p>
+              <div class="hide">
+                <h5 class="justprice"><%= book.price %></h5>
+                <h5 class="justpricedesc"><%= book.price %></h5>
+              </div>
+            </div>
+          </div>
+
+        <% } %>
+    </div>
+  </div>
+</section>
