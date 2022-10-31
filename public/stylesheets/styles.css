@@ -103,10 +103,10 @@ td {
         font-size: 10px !important;
     }
     .login-box {
-        height: 35vh;
+        height: 40vh;
     }
     .register-box, .profile-box {
-        height: 110vh;
+        height: 130vh;
     }
     .form-title {
         font-size: 14px;
@@ -130,5 +130,24 @@ td {
     }
     .cart-box, .order-box {
         padding: 0;
+    }
+}
+
+.bookdetails-flex-div {
+    display: flex;
+}
+
+@media ( width < 1180px) {
+    .bookdetails-flex-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bookinfo {
+        width: 334px;
+        margin-top: 10px;
+    }
+    .bookdetails img {
+        height: 400px;
+        width: 300px;
     }
 }
